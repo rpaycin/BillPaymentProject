@@ -1,0 +1,52 @@
+﻿<ion-view class=" " id="billPaying" title="{{billPayingItem.Name | uppercase}}">
+    <ion-content class="has-header" padding="true">
+
+        <div class="row">
+            <div class="col col-center text-center">
+                <img ng-src="{{billPayingItem.ImgPath}}" style="width:25%">
+                <h5 style="color:#5B5B5B">Ödemesini yapmak istediğiniz faturanıza ait bilgileri sorgulayabilirsiniz</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-center text-center">
+                <div style="text-align:center">
+                    <div class="buttons">
+                        <button class="button icon-right ion-android-menu" ng-click="openCorporationList()" style="width:100%">{{corporationButton.text}}</button>
+                    </div>
+                </div><br />
+                <form name="billPayingForm" ng-show="isShowForm" novalidate>
+                    <label class="item item-input itemLastOperation" ng-class="{ 'has-errors' : billPayingForm.Deger1.$invalid && !billPayingForm.Deger1.$pristine, 'no-errors' : billPayingForm.Deger1.$valid}">
+                        <a class="icon icon-right " style="margin-right: 10px;"></a>
+                        <input name="Deger1" type="tel" placeholder="{{selectedCorporation.Deger1.Etiket}}" ng-model="billPaying.Deger1"
+                               ng-minlength="selectedCorporation.Deger1.Asgari" ng-maxlength="selectedCorporation.Deger1.Azami">
+                    </label>
+                    <label class="item item-input itemLastOperation" ng-show="selectedCorporation.Deger2.Etiket.length > 0"
+                           ng-class="{ 'has-errors' : billPayingForm.Deger2.$invalid && !billPayingForm.Deger2.$pristine, 'no-errors' : billPayingForm.Deger2.$valid}">
+                        <a class="icon icon-right " style="margin-right: 10px;"></a>
+                        <input name="Deger2" type="tel" placeholder="{{selectedCorporation.Deger2.Etiket}}" ng-model="billPaying.Deger2"
+                               ng-minlength="selectedCorporation.Deger2.Asgari" ng-maxlength="selectedCorporation.Deger2.Azami" ng-required="selectedCorporation.Deger2.Etiket.length > 0">
+                    </label>
+                    <label class="item item-input itemLastOperation" ng-show="selectedCorporation.Deger3.Etiket.length > 0"
+                           ng-class="{ 'has-errors' : billPayingForm.Deger3.$invalid && !billPayingForm.Deger3.$pristine, 'no-errors' : billPayingForm.Deger3.$valid}">
+                        <a class="icon icon-right" style="margin-right: 10px;"></a>
+                        <input name="Deger3" type="tel" placeholder="{{selectedCorporation.Deger3.Etiket}}" ng-model="billPaying.Deger3"
+                               ng-minlength="selectedCorporation.Deger3.Asgari" ng-maxlength="selectedCorporation.Deger3.Azami" ng-required="selectedCorporation.Deger3.Etiket.length > 0">
+                    </label><br />
+                    <button ng-click="checkBillPayment()" ng-disabled="billPayingForm.$invalid"
+                            class="button button-formStyle icon ion-search" style="width:100%">
+                        Fatura Sorgula
+                    </button>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+    <!--<div style="position: absolute; bottom: 0px; width: 100%">
+        <div style="text-align: center;">
+            <a class="icon ion-android-call"></a>
+            <p style="color:#CCC">CAGRI MERKEZI</p>
+            <h3 style="color:#CCC;font-weight:bold">444 80 13</h3>
+            <img ng-src="img/footerImg.png">
+        </div>
+    </div>-->
+
+</ion-view>

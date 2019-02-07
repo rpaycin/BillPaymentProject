@@ -1,0 +1,31 @@
+﻿<ion-view class=" " id="basketList" title="SEPET LİSTESİ">
+    <ion-content class="has-header" padding="true">
+        <div class="row" style="background-color:#33363F;">
+            <div class="col col-center text-center">
+                <h5 style="color:white">Sepetinizde bulunan faturaların toplam tutarı</h5>
+                <h2 style="color:red">{{totalPayment/100}} ₺</h2>
+            </div>
+        </div>
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right " ng-repeat="paymentBill in paymentBillBasket" type="item-text-wrap">
+                <img ng-src="{{paymentBill.TipImgPath}}" style="width:130%">
+                <p>Müsteri İsmi : {{paymentBill.MusteriIsmi}}</p>
+                <p>Son Ödeme Tarihi : {{paymentBill.SonOdemeTarihi}}</p>
+                <p>Fatura No : {{paymentBill.FaturaNo}}</p>
+                <h2>Tutar : {{paymentBill.Tutar/100}} ₺</h2>
+                <ion-option-button class="button-assertive" ng-click="removePaymentBill(paymentBill)">
+                    Sil
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+        <div class="row" >
+            <div class="col">
+                <button ng-click="goPayment()" class="button button-formStyle icon ion-card" style="width:100%">
+                    Ödeme Yap
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+

@@ -1,0 +1,65 @@
+﻿<ion-view class=" " id="payment" title="ÖDEME">
+    <ion-content class="has-header" padding="true">
+        <div class="row" style="background-color:#33363F;">
+            <div class="col col-center text-center">
+                <h5 style="color:white">Toplam ödeyeceğiniz tutar</h5>
+                <h3 style="color:red">{{totalPayment/100}} ₺</h3>
+            </div>
+        </div>
+        <br />
+        <form name="payingForm" novalidate>
+            <div class="row">
+                <div class="col text-center">
+                    <label class="item item-input itemLastOperation" ng-class="{ 'has-errors' : payingForm.CardHolderName.$invalid && !payingForm.CardHolderName.$pristine, 'no-errors' : payingForm.CardHolderName.$valid}">
+                        <a class="icon icon-right" style="margin-right: 10px;"></a>
+                        <input name="CardHolderName" type="text" placeholder="Adı Soyadı" ng-model="payment.CardHolderName" ng-minlength="5" ng-maxlength="50" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-90">
+                    <label class="item item-input itemLastOperation" ng-class="{ 'has-errors' : payingForm.CardNumber.$invalid && !payingForm.CardNumber.$pristine, 'no-errors' : payingForm.CardNumber.$valid}">
+                        <a class="icon icon-right" style="margin-right: 10px;"></a>
+                        <input name="CardNumber" type="tel" maxlength="19"
+                               ui-mask="9999 9999 9999 9999" placeholder="Kredi Kartı Numarası" ui-mask-placeholder 
+                               ng-model=" payment.cardnumber" ng-minlength="16" ng-maxlength="19" required
+                               data-credit-card-type data-ng-pattern="/^[0-9]+$/" data-ng-minlength="15">
+                    </label>
+                </div>
+                <div class="col col-10">
+                    <img ng-src="img/payment/{{payment.CreditCardType}}.png" ng-show="payment.CreditCardType!='noPhoto'" style="width:30px;height:44px;" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <label class="item item-input itemLastOperation" ng-class="{ 'has-errors' : payingForm.ExpireYear.$invalid && !payingForm.ExpireYear.$pristine, 'no-errors' : payingForm.ExpireYear.$valid}">
+                        <a class="icon icon-right" style="margin-right: 10px;"></a>
+                        <input name="ExpireYear" type="tel" placeholder="Yıl" maxlength="4" ng-model="payment.ExpireYear" ng-minlength="4" ng-maxlength="4" required>
+                    </label>
+                </div>
+
+                <div class="col text-center">
+                    <label class="item item-input itemLastOperation" ng-class="{ 'has-errors' : payingForm.ExpireMonth.$invalid && !payingForm.ExpireMonth.$pristine, 'no-errors' : payingForm.ExpireMonth.$valid}">
+                        <a class="icon icon-right" style="margin-right: 10px;"></a>
+                        <input name="ExpireMonth" type="tel" placeholder="Ay" maxlength="2" ng-model="payment.ExpireMonth" ng-minlength="2" ng-maxlength="2" required>
+                    </label>
+                </div>
+
+                <div class="col text-center">
+                    <label class="item item-input itemLastOperation" ng-class="{ 'has-errors' : payingForm.Cvc.$invalid && !payingForm.Cvc.$pristine, 'no-errors' : payingForm.Cvc.$valid}">
+                        <a class="icon icon-right" style="margin-right: 10px;"></a>
+                        <input name="Cvc" type="tel" placeholder="CVC" maxlength="4" ng-model="payment.Cvc" ng-minlength="3" ng-maxlength="4" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button ng-click="doPayment()" ng-disabled="payingForm.$invalid"
+                            class="button button-formStyle icon ion-card" style="width:100%">
+                        Ödeme Yap
+                    </button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

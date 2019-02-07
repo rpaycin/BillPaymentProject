@@ -1,0 +1,16 @@
+<ion-view style="background-color:#33363F;" class=" " id="checkBills" title="SORGULANAN FATURALAR">
+    <ion-content class="has-header" padding="true">
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar itemLastOperation item-icon-right " ng-repeat="checkBill in checkBills"
+                      type="item-text-wrap" ui-sref='billPaying({billPayingMenuIndex:checkBill.billPayingMenuId})'>
+                <img ng-src="{{checkBill.imgPath}}">
+                <h2>{{checkBill.checkDate}}</h2>
+                <p>{{checkBill.memberNumber}} - {{checkBill.price}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+                <ion-option-button class="button-assertive" ng-click="removeCheckBill(checkBill)">
+                    Sil
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

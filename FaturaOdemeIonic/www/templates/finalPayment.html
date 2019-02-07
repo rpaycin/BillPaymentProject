@@ -1,0 +1,22 @@
+﻿<ion-view class=" " id="finalPayment" title="ÖDEME SONUÇ">
+    <ion-content class="has-header" padding="true">
+        <div class="row">
+            <div class="col text-center">
+                <img ng-src="img/success.png" style="width:100px;height:100px;" />
+            </div>
+        </div>
+        <div class="row" style="background-color:#33363F;">
+            <div class="col col-center text-center"><br />
+                <h5 style="color:white">Toplam <span style="color:red; font-size:17px">{{totalPayment/100}} ₺, {{basketListCount}} adet</span> fatura ödemeniz gerçekleşmiştir.</h5>
+            <br />
+            </div>
+        </div><br /><br /><br />
+        <div class="row">
+            <div class="col">
+                <button ng-click="goBillCheck()" class="button button-formStyle icon ion-search" style="width:100%">
+                    Yeni Fatura Sorgula
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

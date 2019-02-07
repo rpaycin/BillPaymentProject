@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FaturaOdemeIonic", "http://localhost:29106", "{3E1BA5F7-ADDE-419B-88A3-54180CC60A30}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_29106"
+		Debug.AspNetCompiler.PhysicalPath = "FaturaOdemeIonic\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29106\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_29106"
+		Release.AspNetCompiler.PhysicalPath = "FaturaOdemeIonic\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29106\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "FaturaOdemeIonic\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaturaOdemeApi", "FaturaOdemeApi\FaturaOdemeApi.csproj", "{C102C699-6983-4590-A534-F15244F2CFA1}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://resitpaycin.visualstudio.com/
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = http://localhost:29106
+		SccProjectName1 = FaturaOdemeIonic
+		SccLocalPath1 = FaturaOdemeIonic
+		SccProjectEnlistmentChoice1 = 2
+		SccProjectUniqueName2 = FaturaOdemeApi\\FaturaOdemeApi.csproj
+		SccProjectName2 = FaturaOdemeApi
+		SccLocalPath2 = FaturaOdemeApi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E1BA5F7-ADDE-419B-88A3-54180CC60A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1BA5F7-ADDE-419B-88A3-54180CC60A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1BA5F7-ADDE-419B-88A3-54180CC60A30}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1BA5F7-ADDE-419B-88A3-54180CC60A30}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C102C699-6983-4590-A534-F15244F2CFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C102C699-6983-4590-A534-F15244F2CFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C102C699-6983-4590-A534-F15244F2CFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C102C699-6983-4590-A534-F15244F2CFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

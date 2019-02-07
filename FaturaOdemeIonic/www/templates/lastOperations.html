@@ -1,0 +1,8 @@
+﻿<ion-view style="background-color:#33363F;" class=" " id="lastOperations" title="SON İŞLEMLER">
+    <ion-content ion-sticky class="has-header" padding="true">
+        <ion-list ng-repeat="operation in lastOperations">
+            <ion-item class="item-divider itemLastOperationHeader"> {{operation.type}} </ion-item>
+            <ion-item class="itemLastOperation" ng-repeat="operationName in operation.operations">{{operationName.name}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

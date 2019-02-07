@@ -1,0 +1,42 @@
+﻿{  
+   "ConversationId":"123456789",
+   "PaymentChannel":0,
+   "PaymentCard":{  
+      "CardHolderName":"John Doe",
+      "CardNumber":"5528790000000008",
+      "ExpireYear":"11",
+      "ExpireMonth":"2017",
+      "Cvc":"123",
+      "RegisterCard":0
+   },
+   "BillingAddress":{  
+      "address":"Nidakule Göztepe, Merdivenköy Mah. Bora Sok. No:1",
+      "zipCode":"34742",
+      "contactName":"Jane Doe",
+      "city":"Istanbul",
+      "country":"Turkiye"
+   },
+   "buyer":{  
+      "id":"BY789",
+      "name":"Emin",
+      "surname":"Soyer",
+      "identityNumber":"12345678912",
+      "email":"bilgi@pratikislem.com.tr",
+      "gsmNumber":"0212 286 60 60",
+      "registrationAddress":"Kaptanpaşa Mahallesi Darulaceze Caddesi No:45 Famas İş Merkezi A Blok Kat:2 Şişli",
+      "city":"İSTANBUL",
+      "country":"Turkiye",
+      "zipCode":"34732",
+      "ip":"85.34.78.112"
+   },
+   "BasketItems":[  
+      {  
+         "id":"BI101",
+         "price":"1.1",
+         "name":"Binocular",
+         "category1":"Collectibles",
+         "category2":"Accessories",
+         "itemType":"VIRTUAL"
+      }
+   ]
+}

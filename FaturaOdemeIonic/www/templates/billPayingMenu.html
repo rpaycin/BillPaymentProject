@@ -1,0 +1,37 @@
+﻿<ion-view style="background-color:#33363F;" class=" " id="billPayingMenu" title="FATURA ÖDEME">
+    <ion-content class="has-header" padding="false">
+
+        <div class="row">
+            <div class="col responsive-sm">
+                <img ng-src="img/billPaymentTop.png" style="width:100%" />
+            </div>
+        </div>
+
+        <div class="row" ng-repeat="item in menu" ng-if="$index % 2 === 0" style="border-top: 1px solid #999;">
+
+            <div class="col col-50 " ng-if="$index < menu.length" style="padding:1px;border-right:1px solid #999">
+                <div class="item item-image" style="border-width: 0px; border-style: none; ">
+                    <img ng-click="showBillType($index+1)" ng-src="{{menu[$index].ImgPath}}" style="width:50%;" />
+                </div>
+                <a class="item item-icon-right assertive" href="#" style="border-width: 0px; border-style: none;">
+                    <p ng-click="showBillType($index+1)" style="font-size: 11px;text-align:left; color:white">
+                        {{menu[$index].Name | uppercase}} <br />
+                    </p>
+                </a>
+            </div>
+
+            <div class="col col-50 " ng-if="$index+1  < menu.length" style="padding:1px;">
+                <div class="item item-image" style="border-width: 0px; border-style: none;">
+                    <img ng-click="showBillType($index+2)" ng-src="{{menu[$index+1].ImgPath}}" style="width:50%;" />
+                </div>
+                <a class="item item-icon-right assertive" href="#" style="border-width: 0px; border-style: none;">
+                    <p ng-click="showBillType($index+2)" style="font-size: 11px;text-align:left; color:white">
+                        {{menu[$index+1].Name | uppercase}} <br />
+                    </p>
+                </a>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

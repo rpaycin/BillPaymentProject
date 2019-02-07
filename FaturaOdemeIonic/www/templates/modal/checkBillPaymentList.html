@@ -1,0 +1,21 @@
+﻿<div class="modal" ng-controller="CheckBillPaymentListCtrl">
+    <ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">Faturalarınız</h1>
+        <button class="button button-clear button-primary" ng-click="getCheckBillPayments()">Seç</button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="row" style="background-color:#33363F;">
+            <div class="col col-center text-center">
+                <h5 style="color:white">Sepete eklemek istediğiniz faturalarınızı seçiniz</h5>
+            </div>
+        </div>
+        <div class="list">
+            <ion-checkbox ng-model="checkBillPayments[item.FaturaNo]" ng-repeat="item in billPaymentList.Faturalar" ng-disabled="!item.Tutar">
+                <p>Müşteri İsmi : {{billPaymentList.MusteriIsmi}}</p>
+                <p>Son Ödeme Tarihi : {{item.SonOdemeTarihi}}</p>
+                <p>Fatura No : {{item.FaturaNo}}</p>
+                <h2>Tutar : {{item.Tutar/100}} ₺</h2>
+            </ion-checkbox>
+        </div>
+    </ion-content>
+</div>

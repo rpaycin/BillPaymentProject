@@ -1,0 +1,31 @@
+﻿<ion-view style="" class=" " id="information" title="İLETİŞİM">
+
+    <div class="row responsive-sm">
+        <div class="col">
+            <img ng-src="img/information.jpg" style="width:100%;" />
+        </div>
+    </div>
+    <div class="row  responsive-sm">
+        <div class="col">
+            <form name="informationForm" novalidate>
+                <label class="item item-input" ng-class="{ 'has-errors' : informationForm.cellPhone.$invalid && !informationForm.cellPhone.$pristine, 'no-errors' : informationForm.cellPhone.$valid}">
+                    <a class="icon icon-right ion-iphone" style="margin-right: 10px;"></a>
+                    <input name="cellPhone" type="tel" placeholder="Cep Telefonu" ng-model="information.cellPhone" ng-minlength="10" ng-maxlength="11" maxlength="11" required>
+                </label>
+                <label class="item item-input" ng-class="{ 'has-errors' : informationForm.telephone.$invalid && !informationForm.telephone.$pristine, 'no-errors' : informationForm.telephone.$valid}">
+                    <a class="icon icon-right ion-android-call" style="margin-right: 10px;"></a>
+                    <input name="telephone" type="tel" placeholder="Sabit Telefon" ng-minlength="10" ng-maxlength="11" maxlength="11" ng-model="information.telephone">
+                </label>
+                <label class="item item-input" ng-class="{ 'has-errors' : informationForm.emailAddress.$invalid && !informationForm.emailAddress.$pristine, 'no-errors' : informationForm.emailAddress.$valid}">
+                    <a class="icon icon-right ion-email" style="margin-right: 10px;"></a>
+                    <input name="emailAddress" type="email" placeholder="Email Adresi" ng-model="information.emailAddress" ng-minlength="10" required>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer" class="button-bar">
+        <button style="min-width: 50%;border-radius: 0px;" ng-click="cancelForm()" class="button button-lite icon-left ion-close">Iptal</button>
+        <button ng-click="saveForm()" ng-disabled="informationForm.$invalid" class="button button-assertive icon-left ion-checkmark" style="min-width: 50%;border-radius: 0px;"> Kaydet </button>
+    </div>
+</ion-view>

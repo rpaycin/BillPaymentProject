@@ -1,0 +1,147 @@
+1. https://www.bizimvezne.com/api/ adresindeki apiyi dýþardan çaðýrmam gerekli
+þu anda https://www.bizimvezne.com/api/testapi.php adresi hariç baþka bir ortamdan api çaðrýlamýyor, dummy data ile çalýþýyorum
+
+2. fatura_ode metodu request modeline kullanýcýnýn telefon, mail adresi ve iyzicoId bilgileri eklenmeli
+
+3. fatura ödeme sayfasýnda kaldým. sepetteki faturalar teker teker iyzico ya gönderilcek. iyzicodan  gelen iyzicoid ile pratikislemdeki fatura_ode çaðrýlcak
+ödeme bitirilcek
+
+
+
+EMIN BEY ýn yolladýðý mail
+
+https://www.bizimvezne.com/api/testapi.php#
+
+
+
+
+{
+    "Sonuc": "OK",
+    "SonucKodu": 1014,
+    "GuncelTarih": "2016-08-04 19:49:56",
+    "Aciklama": "Kurum Listesi",
+    "ToplamKurumAdeti": 140,
+    "Kurumlar": [
+        {
+            "KurumNo": 1,
+            "Tip": 5,
+            "Isim": "ÝSTANBUL SU (ÝSKÝ)",
+            "Durum": 1,
+            "Aciklama": "",'eðer varise gösterilecek
+            "Deger1": {
+                "Etiket": "Abone No",
+                "Aciklama": "",
+                "SifirIleDoldur": 0, 'eðer burasý 1 ise girilen deðerin soluna max deðere kadar 0 doldurulur.
+                "Asgari": 0,
+                "Azami": 8,
+		"GiriþTipi: A 'alfenumarik N olursa Numerik olacak.
+ },
+            "Deger2": {
+                "Etiket": "",
+                "Aciklama": "",
+                "SifirIleDoldur": 0,
+                "Asgari": 0,
+                "Azami": 0
+            },
+            "Deger3": {
+                "Etiket": "",
+                "Aciklama": "",
+                "SifirIleDoldur": 0,
+                "Asgari": 0,
+                "Azami": 0
+            }
+        },
+
+
+
+Fatura Sorgulama 
+
+{
+"KullaniciAdi":"testuser",
+"KullaniciSifresi":"1234",
+"GuncelTarih":"2016-08-04 20:02:45",
+"KurumNo":55,
+"Deger1":"5321000037",
+"Deger2":"",
+"Deger3":""
+}
+,
+
+
+
+
+iyzico ya gidecek
+
+Fatura ödeme kýsmý
+
+{
+"KullaniciAdi":"testuser",
+"KullaniciSifresi":"1234",
+"GuncelTarih":"2016-08-04 20:05:16",
+"KurumNo":55,
+"KurumAnahtar":55, 'her zaman kurum no ile aynýdýr
+"MusteriIsmi":"T*** B*****", gösterilecek
+"Deger1":"5317010909",
+"Deger2":"",
+"Deger3":"",
+"FaturaNo":"50000000000562",
+"SonOdemeTarihi":"2015-04-28",
+"Tutar":3156,
+"GecikmeBedeli":0,
+"Komisyon":100,
+"Sira":2,
+"SepetNo":0,
+"Anahtar1":"20150523193202134308",
+"Anahtar2":"14323987219312",
+"Anahtar3":"RKSMPQ5GZ34DTI"
+"iyzicoonaykodu":blablalbal
+ }
+
+
+
+
+iyzico 
+ 
+Bende memnun oldum. entegrasyon dokümanýmýza aþaðýdaki linkten ulaþabilirsiniz.
+ 
+https://www.iyzico.com/wp-content/uploads/2016/04/iyzico-Checkout-FormPayment-Page-Integration-Document_TR_v1.1-1.pdf
+ 
+Programlama yapmayý düþündüðünüz dile uygun api istemcisi için;
+ 
+https://github.com/iyzico
+ 
+adresini ziyaret edebilirsiniz. Ben localimde kodlarýmý PHP ile yazýyorum,
+ 
+ve aþaðýdaki örnekteki
+ 
+https://github.com/iyzico/iyzipay-php/blob/develop/samples/CheckoutFormInitializeSample.php
+ 
+fonksiyon ödeme formunu göstermekte;
+ 
+ve sonucunu ise öðrenebilmek için
+ 
+https://github.com/iyzico/iyzipay-php/blob/develop/samples/CheckoutFormAuthSample.php
+ 
+adresini kullanabilirsiniz.
+ 
+sorularýnýz olursa yanýtlamaktan memnuniyet duyarým,
+ 
+hazýr entegre edilmiþ kod için;
+ 
+sonuç sayfasý: https://gist.github.com/emrefaik/071ce7acd00e7290b70b9e7a1e6176f5
+ödeme sayfasý: https://gist.github.com/emrefaik/8ca7394c69de68f5955d2d0f4fa17197
+ 
+,
+
+
+api anahtarý v.b.
+API Anahtarý
+7V6o8TCzYaRSFz5Rb58blEXJI69Zu9zq
+Güvenlik Anahtarý
+i0SJQY67Uu2TdMrEp5tyQqnVk1a3SWzm
+
+
+
+
+
+Saygýlarýmla

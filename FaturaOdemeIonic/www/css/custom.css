@@ -1,0 +1,58 @@
+﻿/*form validate*/
+.has-errors {
+    border-left: 3px solid #cc2511;
+    border-right: 3px solid #cc2511;
+}
+.no-errors {
+    border-left: 3px solid #3d8b3d;
+    border-right: 3px solid #3d8b3d;
+}
+
+/*Index*/
+.platform-ios .manual-ios-statusbar-padding {
+    padding-top: 20px;
+}
+
+.manual-remove-top-padding {
+    padding-top: 0px;
+}
+
+    .manual-remove-top-padding .scroll {
+        padding-top: 0px !important;
+    }
+
+ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+    ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius: 0px;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+/*fatura ödeme menu*/
+.menuItemBorder {
+    border-width: 0px;
+    border-style: none;
+}
+
+.menuItemImage {
+    width: 50%;
+}
+
+.menuItemText {
+    font-size: 14px;
+    text-align: left;
+    color: white;
+}
+
+/*son işlemler*/
+.list-avatar-page {
+  ion-note {
+    font-size: 12px;
+    align-self: flex-start;
+    margin-top: 14px;
+  }
+}

@@ -1,0 +1,13 @@
+<ion-view style="background-color:#33363F;" class=" " id="remindings" title="HATIRLATMALAR ">
+
+    <ion-content class="has-header" padding="true">
+        <div class="bounceInLeft" ng-repeat="remainding in remaindings">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <h3>{{remainding.date}}</h3>
+                    <p>{{remainding.remaindingText}}</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
